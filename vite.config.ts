@@ -14,7 +14,7 @@ export default defineConfig(async () => {
     plugins,
     server: {
       host: true,
-      port: 5222,
+      port: 80,
       strictPort: true,
     },
   };
