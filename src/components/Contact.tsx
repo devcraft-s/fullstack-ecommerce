@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, CheckCircle, Load
 
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'Amazing@devshop.io', href: 'mailto:Amazing@devshop.io' },
-  { icon: Phone, label: 'Phone', value: '+1 (415) 555-0123', href: 'tel:+14155550123' },
+  { icon: Phone, label: 'Phone', value: '+1 (440) 313-9295', href: 'tel:+14403139295' },
   { icon: MapPin, label: 'Location', value: 'Tokyo, Japan', href: '#' },
 ];
 
