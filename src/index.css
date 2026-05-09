@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a12;
+  --color-foreground: #ffffff;
+  --color-primary: #22d3ee;
+  --color-primary-light: #67e8f9;
+  --color-primary-dark: #06b6d4;
+  --color-secondary: #a78bfa;
+  --color-accent: #f472b6;
+  --color-muted: #94a3b8;
+  --color-muted-foreground: #e2e8f0;
+  --color-card: #111827;
+  --color-card-hover: #1f2937;
+  --color-border: #374151;
+  --color-success: #4ade80;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/jetbrainsmono/v18/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPVmUsaaDhw.woff2') format('woff2');
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a12;
+  color: #f8fafc;
+  font-family: var(--font-sans);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a12;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #22d3ee 0%, #a78bfa 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; box-shadow: 0 0 20px rgba(34, 211, 238, 0.3); }
+  50% { opacity: 1; box-shadow: 0 0 40px rgba(34, 211, 238, 0.6); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.4);
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(167, 139, 250, 0.4);
+}
+
+.glow-pink {
+  box-shadow: 0 0 30px rgba(244, 114, 182, 0.4);
+}
+
+/* Text glow animations */
+@keyframes text-glow-cyan {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.8), 0 0 40px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.3);
+  }
+}
+
+@keyframes text-glow-purple {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(167, 139, 250, 0.5), 0 0 20px rgba(167, 139, 250, 0.3);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(167, 139, 250, 0.8), 0 0 40px rgba(167, 139, 250, 0.5), 0 0 60px rgba(167, 139, 250, 0.3);
+  }
+}
+
+@keyframes text-glow-pink {
+  0%, 100% { 
+    text-shadow: 0 0 10px rgba(244, 114, 182, 0.5), 0 0 20px rgba(244, 114, 182, 0.3);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(244, 114, 182, 0.8), 0 0 40px rgba(244, 114, 182, 0.5), 0 0 60px rgba(244, 114, 182, 0.3);
+  }
+}
+
+@keyframes text-brightness {
+  0%, 100% { 
+    filter: brightness(1);
+    opacity: 0.9;
+  }
+  50% { 
+    filter: brightness(1.3);
+    opacity: 1;
+  }
+}
+
+.animate-text-glow-cyan {
+  animation: text-glow-cyan 2s ease-in-out infinite;
+}
+
+.animate-text-glow-purple {
+  animation: text-glow-purple 2s ease-in-out infinite;
+}
+
+.animate-text-glow-pink {
+  animation: text-glow-pink 2s ease-in-out infinite;
+}
+
+.animate-text-brightness {
+  animation: text-brightness 3s ease-in-out infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-text-flow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-text {
+  background: linear-gradient(90deg, #22d3ee, #a78bfa, #f472b6, #22d3ee);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-text-flow 4s ease infinite;
+}
