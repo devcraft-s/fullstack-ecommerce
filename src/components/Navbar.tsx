@@ -55,14 +55,14 @@ export default function Navbar() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <motion.div 
+              {/* <motion.div 
                 className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-400 flex items-center justify-center"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.5 }}
               >
                 <ShoppingBag className="w-5 h-5 text-white" />
-              </motion.div>
-              <span className="text-white">Amazing<span className="text-cyan-300">.</span></span>
+              </motion.div> */}
+              <span className="text-white">Rokify-Tech<span className="text-cyan-300">.</span></span>
             </motion.a>
 
             <div className="hidden md:flex items-center gap-1">

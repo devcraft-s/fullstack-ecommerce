@@ -23,10 +23,12 @@ const floatingIcons = [
 ];
 
 const roles = [
-  'Full-Stack E-Commerce Developer',
-  'Shopify Expert',
-  'Conversion Optimization Specialist',
-  'Custom Theme Developer',
+  'Design & Development',
+  'AI Integration & Automation',
+  'Digital Marketing',
+  'Global Business Strategy',
+  'Technology Implementation',
+  'Data Analytics',
 ];
 
 // Animated star component
@@ -478,7 +480,7 @@ const StatusBadge = ({ onClickEffect }: { onClickEffect: (e: React.MouseEvent) =
             }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            Available for new opportunities
+            We can help you reimagine your business through a digital lens.
           </motion.span>
         </motion.div>
       </MovingBorderCard>
@@ -554,7 +556,7 @@ export default function Hero() {
     delay: Math.random() * 8,
   }));
 
-  const nameText = "Hiroki Yamashita";
+  const nameText = "THE GROWTH INVENTION COMPANY";
 
   return (
     <section
@@ -644,18 +646,18 @@ export default function Hero() {
       />
 
       {/* Animated stars */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {stars.map((star, i) => (
           <AnimatedStar key={i} {...star} />
         ))}
-      </div>
+      </div> */}
 
       {/* Rising particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {particles.map((particle, i) => (
           <Particle key={i} {...particle} />
         ))}
-      </div>
+      </div> */}
 
       {/* Floating e-commerce icons */}
       {floatingIcons.map(({ Icon, x, y, size, delay }, index) => (
@@ -753,7 +755,8 @@ export default function Hero() {
                 onClick={addSparkleEffect}
                 transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
               >
-                Full-Stack E-Commerce Developer
+                <b className='text-4xl'>We Drive Global Business</b><br/>
+                with technology deployments in 150+ countries
               </motion.h2>
             </TraceBorderCard>
           </motion.div>
@@ -786,7 +789,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Location */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.1 }}
@@ -813,7 +816,7 @@ export default function Hero() {
                 <span>Tokyo, Japan • Open to Remote</span>
               </motion.div>
             </TraceBorderCard>
-          </motion.div>
+          </motion.div> */}
 
           {/* Description */}
           <motion.p
@@ -822,7 +825,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 1.2 }}
             className="text-lg text-gray-300 max-w-2xl mx-auto mb-10 mt-8 leading-relaxed"
           >
-            I build{' '}
+            Strategically positioned for enterprise support, {' '}
             <motion.span 
               className="text-cyan-300 font-bold cursor-pointer select-none"
               animate={{
@@ -837,9 +840,9 @@ export default function Hero() {
               onClick={addSparkleEffect}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              high-converting Shopify stores
+              Rokify-Tech
             </motion.span>{' '}
-            and custom e-commerce solutions. Specialized in creating seamless shopping experiences that{' '}
+            combines the comprehensive experience of a {' '}
             <motion.span 
               className="text-purple-300 font-bold cursor-pointer select-none"
               animate={{
@@ -854,9 +857,9 @@ export default function Hero() {
               onClick={addSparkleEffect}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
-              drive revenue
+              globally integrated team
             </motion.span>{' '}
-            and delight customers.
+            with the value of localized support in key regions around the world.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -867,18 +870,18 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
           >
             <InteractiveButton href="#projects" primary onClickEffect={addSparkleEffect}>
-              View My Work
+              Proven Results for Global Clients
               <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
                 →
               </motion.span>
             </InteractiveButton>
             <InteractiveButton href="#contact" onClickEffect={addSparkleEffect}>
-              Let's Connect
+              Contact Us
             </InteractiveButton>
           </motion.div>
 
           {/* Tech Stack */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.4 }}
@@ -895,7 +898,7 @@ export default function Hero() {
                 <TechBadge key={tech.name} tech={tech} index={index} onClickEffect={addSparkleEffect} />
               ))}
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Scroll indicator */}
