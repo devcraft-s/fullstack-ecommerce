@@ -88,7 +88,7 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <motion.div
+          {/* <motion.div
             initial={{ scale: 0 }}
             animate={isInView ? { scale: 1 } : {}}
             transition={{ type: 'spring', bounce: 0.5, delay: 0.2 }}
@@ -96,9 +96,9 @@ export default function Testimonials() {
           >
             <Sparkles className="w-4 h-4 text-cyan-300" />
             <span className="text-cyan-300 text-sm font-medium">Testimonials</span>
-          </motion.div>
+          </motion.div> */}
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            What{' '}
+          Our Clients’{' '}
             <motion.span 
               className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent inline-block"
               animate={{
@@ -115,11 +115,11 @@ export default function Testimonials() {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              Clients Say
+              Success Stories
             </motion.span>
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Don't just take my word for it. Here's what business owners have to say about working with me.
+            Case studies show how we work with global companies across industries, helping them improve systems, build new products, and scale their technology through long-term collaboration and reliable delivery.
           </p>
         </motion.div>
 

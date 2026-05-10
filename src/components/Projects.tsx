@@ -30,35 +30,7 @@ const projects = [
     links: { live: '#', github: '#' },
     icon: Zap,
     color: 'cyan',
-  },
-  {
-    id: 3,
-    title: 'HomeNest Decor',
-    category: 'Headless Commerce',
-    role: 'Lead Developer',
-    description: 'Headless e-commerce solution using Shopify Hydrogen and React. Features 3D product visualization, AR room preview, and lightning-fast performance.',
-    image: '/images/project-4.jpg',
-    tags: ['Headless', '3D View', 'AR Preview', 'PWA'],
-    tech: ['Hydrogen', 'React', 'Three.js', 'Tailwind', 'Vercel'],
-    stats: { performance: '98/100', engagement: '+55%', sales: '+35%' },
-    links: { live: '#', github: '#' },
-    icon: Package,
-    color: 'purple',
-  },
-  {
-    id: 4,
-    title: 'TechGear Pro',
-    category: 'Multi-Vendor Marketplace',
-    role: 'Full Stack Developer',
-    description: 'Multi-vendor electronics marketplace with vendor dashboards, commission management, and automated payouts. Handles 500+ daily transactions.',
-    image: '/images/project-1.jpg',
-    tags: ['Multi-Vendor', 'Dashboards', 'Payouts', 'Analytics'],
-    tech: ['Shopify Plus', 'Node.js', 'PostgreSQL', 'Stripe Connect'],
-    stats: { vendors: '200+', transactions: '500/day', gmv: '$5M+' },
-    links: { live: '#', github: '#' },
-    icon: TrendingUp,
-    color: 'amber',
-  },
+  }
 ];
 
 export default function Projects() {
@@ -105,7 +77,7 @@ export default function Projects() {
             <span className="text-cyan-300 text-sm font-medium">Featured Work</span>
           </motion.div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Recent{' '}
+            Featured{' '}
             <motion.span 
               className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent inline-block"
               animate={{
@@ -177,7 +149,7 @@ export default function Projects() {
                   >
                     <ExternalLink className="w-4 h-4" />
                   </motion.a>
-                  <motion.a
+                  {/* <motion.a
                     href={project.links.github}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -185,7 +157,7 @@ export default function Projects() {
                     onClick={(e) => e.stopPropagation()}
                   >
                     <Github className="w-4 h-4" />
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </div>
 
@@ -233,14 +205,14 @@ export default function Projects() {
         </div>
 
         {/* Featured Project Detail */}
-        <motion.div
+        {/* <motion.div
           key={activeIndex}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="bg-gray-900/80 rounded-2xl border border-gray-700 p-6 md:p-8"
-        >
-          <div className="flex items-center justify-between mb-6">
+        > */}
+          {/* <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-4">
               <motion.div 
                 className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 flex items-center justify-center"
@@ -275,12 +247,12 @@ export default function Projects() {
                 <ChevronRight className="w-5 h-5" />
               </motion.button>
             </div>
-          </div>
+          </div> */}
 
-          <p className="text-gray-300 mb-6">{projects[activeIndex].description}</p>
+          {/* <p className="text-gray-300 mb-6">{projects[activeIndex].description}</p> */}
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 mb-6">
+          {/* <div className="grid grid-cols-3 gap-4 mb-6">
             {Object.entries(projects[activeIndex].stats).map(([key, value], i) => (
               <motion.div 
                 key={key} 
@@ -293,10 +265,10 @@ export default function Projects() {
                 <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
 
           {/* Full Tech Stack */}
-          <div className="flex flex-wrap gap-2">
+          {/* <div className="flex flex-wrap gap-2">
             {projects[activeIndex].tech.map((t, i) => (
               <motion.span 
                 key={t} 
@@ -308,11 +280,11 @@ export default function Projects() {
                 {t}
               </motion.span>
             ))}
-          </div>
-        </motion.div>
+          </div> */}
+        {/* </motion.div> */}
 
         {/* View More */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -329,7 +301,7 @@ export default function Projects() {
             <Github className="w-5 h-5" />
             <span>View More on GitHub</span>
           </motion.a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
