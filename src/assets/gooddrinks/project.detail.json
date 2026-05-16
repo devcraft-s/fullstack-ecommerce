@@ -1,0 +1,73 @@
+{
+    "project": {
+      "name": "Good Drinks Australia Corporate Website",
+      "client": "Good Drinks Australia",
+      "website": "https://gooddrinks.com.au/",
+      "industry": "Beverage & Brewing",
+      "role": "Web Developer",
+      "description": "Supported the development and maintenance of the corporate website for Good Drinks Australia, a beverage and brewing company. Contributed to frontend enhancements, WordPress customization, animation effects, SEO improvements, and performance optimization to deliver a modern and engaging digital brand experience.",
+      "responsibilities": [
+        "Developed and maintained custom WordPress features and templates",
+        "Implemented responsive frontend layouts and interactive UI components",
+        "Created smooth scrolling and animation experiences using GSAP and Lenis",
+        "Integrated and customized Gravity Forms for customer interactions",
+        "Enhanced SEO structure and metadata using Yoast SEO",
+        "Optimized website performance and Cloudflare CDN configuration",
+        "Supported Open Graph integration for social media sharing",
+        "Maintained reusable JavaScript functionality with jQuery and Swiper",
+        "Managed PHP-based backend customizations and WordPress integrations",
+        "Improved mobile responsiveness and user experience across devices"
+      ],
+      "technologies": {
+        "cms": [
+          "WordPress"
+        ],
+        "blog_platform": [
+          "WordPress"
+        ],
+        "frontend": [
+          "JavaScript",
+          "GSAP",
+          "Swiper",
+          "Lenis 1.0.42",
+          "jQuery 3.7.1",
+          "jQuery Migrate 3.4.1",
+          "core-js 3.33.3"
+        ],
+        "backend": [
+          "PHP"
+        ],
+        "database": [
+          "MySQL"
+        ],
+        "infrastructure": [
+          "Cloudflare CDN",
+          "HTTP/3"
+        ],
+        "seo": [
+          "Yoast SEO"
+        ],
+        "wordpress_plugins": [
+          "Gravity Forms 2.8.3",
+          "SVG Support",
+          "Yoast SEO"
+        ],
+        "design_assets": [
+          "Adobe Fonts",
+          "Twitter Emoji (Twemoji)"
+        ],
+        "features": [
+          "Open Graph",
+          "Responsive Design",
+          "Custom Animations"
+        ]
+      },
+      "highlights": [
+        "Supported a modern corporate website for a major beverage company",
+        "Enhanced user engagement through smooth animations and transitions",
+        "Improved SEO visibility and social media integration",
+        "Optimized website speed and frontend performance",
+        "Contributed to responsive and scalable WordPress development"
+      ]
+    }
+  }
