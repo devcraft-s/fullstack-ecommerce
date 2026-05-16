@@ -17,7 +17,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, label: 'GitHub', href: 'https://github.com' },
+  { icon: Github, label: 'GitHub', href: 'https://github.com/devcraft-s/' },
   { icon: WhatsAppIcon, label: 'WhatsApp', href: 'https://wa.me/14403139295' },
 ];
 
