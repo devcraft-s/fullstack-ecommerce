@@ -6,45 +6,45 @@ const testimonials = [
   {
     id: 1,
     name: 'Sarah Mitchell',
-    role: 'Founder & CEO',
-    company: 'LuxeStyle Fashion',
+    role: 'Chief Digital Officer',
+    company: 'LuxeStyle Fashion · UK',
     avatar: 'SM',
     rating: 5,
-    text: 'Hiroki Yamashita transformed our outdated Shopify store into a modern, high-converting powerhouse. Our conversion rate increased by 40% within the first month. The attention to detail and understanding of e-commerce best practices is unmatched.',
-    results: '+40% Conversion Rate',
-    color: 'emerald',
+    text: 'They reimagined our commerce stack end to end—new storefront, integrations, and analytics. Within two quarters we saw a measurable lift in conversion and a much clearer picture of what drives revenue across markets.',
+    results: '+40% conversion in 90 days',
+    color: 'cyan',
   },
   {
     id: 2,
     name: 'Michael Chen',
-    role: 'E-Commerce Director',
-    company: 'VitaBoost Health',
+    role: 'VP of Product',
+    company: 'VitaBoost Health · Singapore',
     avatar: 'MC',
     rating: 5,
-    text: 'The subscription system Hiroki Yamashita built for us has been a game-changer. We went from manual order management to a fully automated system that handles 15,000+ subscribers. Customer retention improved dramatically.',
-    results: '85% Customer Retention',
-    color: 'cyan',
+    text: 'Our subscription and fulfillment workflows were fragmented. The team designed automation around recurring orders and CRM syncs so we could scale past 15,000 active subscribers without adding headcount.',
+    results: '85% subscriber retention',
+    color: 'purple',
   },
   {
     id: 3,
     name: 'Emily Rodriguez',
-    role: 'Marketing Manager',
-    company: 'HomeNest Decor',
+    role: 'Director of Engineering',
+    company: 'HomeNest · North America',
     avatar: 'ER',
     rating: 5,
-    text: 'Working with Hiroki Yamashita on our headless commerce project was incredible. The 3D product visualization and AR features have set us apart from competitors. Site speed is lightning fast and customers love the experience.',
-    results: '98/100 Performance Score',
-    color: 'purple',
+    text: 'We needed a headless experience that could ship fast and perform under peak traffic. They delivered a modern front end, solid APIs, and observability from day one—our Core Web Vitals and release cadence both improved.',
+    results: '98/100 performance score',
+    color: 'pink',
   },
   {
     id: 4,
     name: 'David Park',
     role: 'Co-Founder',
-    company: 'TechGear Pro',
+    company: 'TechGear Pro · EU',
     avatar: 'DP',
     rating: 5,
-    text: 'Hiroki Yamashita built our entire multi-vendor marketplace from scratch. The vendor dashboards, commission management, and automated payouts work flawlessly. We now process 500+ transactions daily without a hitch.',
-    results: '$5M+ GMV Processed',
+    text: 'Building a multi-vendor marketplace is hard; payouts, commissions, and vendor tooling have to be right. They owned the architecture and delivery, and we now run hundreds of daily transactions with confidence.',
+    results: '$5M+ GMV processed',
     color: 'amber',
   },
 ];
@@ -88,17 +88,17 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          {/* <motion.div
+          <motion.div
             initial={{ scale: 0 }}
             animate={isInView ? { scale: 1 } : {}}
             transition={{ type: 'spring', bounce: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/40 mb-6"
           >
             <Sparkles className="w-4 h-4 text-cyan-300" />
-            <span className="text-cyan-300 text-sm font-medium">Testimonials</span>
-          </motion.div> */}
+            <span className="text-cyan-300 text-sm font-medium">Client Stories</span>
+          </motion.div>
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-          Our Clients’{' '}
+            Our Clients&apos;{' '}
             <motion.span 
               className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent inline-block"
               animate={{
@@ -143,7 +143,7 @@ export default function Testimonials() {
               animate={{ rotate: [0, 10, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity }}
             >
-              <Quote className="w-12 h-12 text-emerald-500/20" />
+              <Quote className="w-12 h-12 text-cyan-500/20" />
             </motion.div>
 
             {/* Stars */}
@@ -247,8 +247,8 @@ export default function Testimonials() {
               whileHover={{ scale: 1.03, y: -5 }}
               className={`text-left p-5 rounded-xl border transition-all duration-300 ${
                 activeIndex === index
-                  ? 'bg-emerald-500/10 border-cyan-400'
-                  : 'bg-gray-900/80 border-gray-700 hover:border-gray-700'
+                  ? 'bg-cyan-500/10 border-cyan-400'
+                  : 'bg-gray-900/80 border-gray-700 hover:border-gray-600'
               }`}
             >
               <div className="flex items-center gap-3 mb-3">
