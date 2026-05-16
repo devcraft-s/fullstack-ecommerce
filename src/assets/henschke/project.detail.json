@@ -1,0 +1,70 @@
+{
+  "project": {
+    "name": "Henschke Winery Ecommerce & Brand Website",
+    "client": "Henschke",
+    "website": "https://www.henschke.com.au/",
+    "industry": "Wine & Beverage",
+    "role": "Web Developer",
+    "description": "Supported the development and maintenance of the official website and ecommerce experience for Henschke, one of Australia’s oldest family-owned wineries established in 1868. Contributed to frontend development, ecommerce functionality, responsive UX improvements, and performance optimization for a premium wine brand platform focused on storytelling, sustainability, and online wine sales.",
+    "responsibilities": [
+      "Developed and maintained responsive frontend components for the winery ecommerce platform",
+      "Supported Shopify-based ecommerce features and customer purchasing flows",
+      "Implemented UI/UX enhancements for premium brand presentation",
+      "Optimized website performance and page loading experience",
+      "Integrated marketing and analytics tools for customer engagement",
+      "Supported SEO optimization and structured metadata improvements",
+      "Worked on reusable frontend functionality and interactive experiences",
+      "Maintained PHP-based integrations and backend support systems",
+      "Enhanced mobile responsiveness across ecommerce and content pages",
+      "Collaborated on sustainability and brand storytelling presentation pages"
+    ],
+    "technologies": {
+      "ecommerce_platform": [
+        "Shopify"
+      ],
+      "frontend": [
+        "JavaScript",
+        "jQuery",
+        "core-js"
+      ],
+      "backend": [
+        "PHP"
+      ],
+      "analytics_and_marketing": [
+        "Google Analytics",
+        "Hotjar",
+        "Klaviyo",
+        "Mailchimp",
+        "SendGrid"
+      ],
+      "payments": [
+        "Shopify Payments",
+        "PayPal"
+      ],
+      "seo_and_tracking": [
+        "Yoast SEO",
+        "Facebook Custom Audiences"
+      ],
+      "design_and_media": [
+        "Adobe Typekit"
+      ],
+      "infrastructure": [
+        "Cloudflare",
+        "QUIC"
+      ],
+      "features": [
+        "Responsive Design",
+        "Ecommerce",
+        "Wine Club Membership",
+        "Online Wine Sales"
+      ]
+    },
+    "highlights": [
+      "Supported a premium winery ecommerce platform with global brand presence",
+      "Contributed to modern ecommerce UX and responsive frontend experiences",
+      "Improved performance and scalability for online wine sales",
+      "Enhanced customer engagement through marketing integrations",
+      "Supported digital storytelling for sustainability and winery heritage"
+    ]
+  }
+}
