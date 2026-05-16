@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'Amazing@devshop.io', href: 'mailto:Amazing@devshop.io' },
   { icon: Phone, label: 'Phone', value: '+1 (440) 313-9295', href: 'tel:+14403139295' },
-  { icon: MapPin, label: 'Location', value: 'Tokyo, Japan', href: '#' },
+  { icon: MapPin, label: 'Locations', value: 'US · EU · APAC delivery hubs', href: '#' },
 ];
 
 const socialLinks = [
@@ -93,7 +93,8 @@ export default function Contact() {
             </motion.span>
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Have a project in mind? Feel free to reach out. I&apos;m always open to discussing new opportunities.
+            Tell us about your product, platform, or commerce initiative. Our team will respond with next steps and the
+            right specialists for your scope.
           </p>
         </motion.div>
 
@@ -138,7 +139,7 @@ export default function Contact() {
                       <CheckCircle className="w-8 h-8 text-cyan-300" />
                     </motion.div>
                     <h5 className="text-xl font-semibold text-white mb-2">Message Sent!</h5>
-                    <p className="text-gray-300">Thank you for reaching out. I&apos;ll get back to you soon.</p>
+                    <p className="text-gray-300">Thank you for reaching out. A member of our team will respond shortly.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
@@ -181,7 +182,7 @@ export default function Contact() {
                         required
                         rows={7}
                         className="w-full px-4 py-3 bg-[#0a0a12] border border-gray-700 rounded-xl focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-white placeholder-gray-600 transition-all duration-300 resize-none"
-                        placeholder="Tell me about your project..."
+                        placeholder="Tell us about your project, timeline, and goals..."
                       />
                     </motion.div>
                     <motion.button
@@ -246,7 +247,7 @@ export default function Contact() {
               </motion.div>
 
               <motion.div>
-                <h4 className="text-xl font-semibold text-white mb-4">Connect with Me</h4>
+                <h4 className="text-xl font-semibold text-white mb-4">Connect with Us</h4>
                 <motion.div className="flex gap-3">
                   {socialLinks.map(({ icon: Icon, label, href }, index) => (
                     <motion.a
@@ -280,11 +281,11 @@ export default function Contact() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-300" />
                   </span>
-                  <span className="font-semibold text-cyan-300">Available for hire</span>
+                  <span className="font-semibold text-cyan-300">Taking new client work</span>
                 </motion.div>
                 <p className="text-sm text-gray-300">
-                  I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi,
-                  I&apos;ll try my best to get back to you!
+                  Rokify-Tech is accepting new engagements for product builds, commerce programs, and long-term
+                  engineering partnerships. Share your brief and we will route it to the right practice lead.
                 </p>
               </motion.div>
             </motion.div>

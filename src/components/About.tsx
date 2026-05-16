@@ -16,15 +16,15 @@ import {
 } from 'lucide-react';
 
 const stats = [
-  { value: '10+', label: 'Combined Years', icon: '🚀' },
-  { value: '50+', label: 'Projects Completed', icon: '💼' },
-  { value: '100%', label: 'Client Satisfaction', icon: '⭐' },
+  { value: '12+', label: 'Years in Business', icon: '🚀' },
+  { value: '300+', label: 'IT Professionals', icon: '💼' },
+  { value: '9.3/10', label: 'Client Satisfaction', icon: '⭐' },
 ];
 
 const teamMembers = [
   {
     name: 'Hiroki Yamashita',
-    role: 'Lead · Full-Stack E-Commerce',
+    role: 'Founder · Engineering Lead',
     bio: 'Shopify and headless storefronts, app integrations, and performance tuning for stores that scale.',
     initials: 'HY',
     color: 'cyan' as const,
@@ -62,10 +62,10 @@ const qualities = [
 ];
 
 const badges = [
-  { icon: Award, text: 'Shopify Partner' },
+  { icon: Award, text: 'IDC MarketScape Leader' },
   { icon: Clock, text: 'On-Time Delivery' },
   { icon: CheckCircle, text: 'Quality Assured' },
-  { icon: Handshake, text: 'Long-term Support' },
+  { icon: Handshake, text: 'Long-Term Partnerships' },
 ];
 
 // const CO_FOUNDER_IMAGE = '/images/co-founder.jpg';
@@ -642,8 +642,8 @@ export default function About() {
             </motion.span>
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Designers, engineers, and growth specialists working as one unit—shipping high-converting stores,
-            integrations, and the analytics to prove what works.
+            Rokify-Tech brings designers, engineers, and growth specialists together—shipping digital products,
+            commerce platforms, and the measurement to prove what works.
           </p>
         </motion.div>
 
@@ -664,7 +664,7 @@ export default function About() {
                 >
                   <img
                     src={CO_FOUNDER_IMAGE}
-                    alt="Co-founder"
+                    alt="Rokify-Tech leadership team"
                     className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
                     loading="lazy"
                     decoding="async"
@@ -683,7 +683,9 @@ export default function About() {
             <div>
               <h4 className="text-xl font-semibold text-white mb-3">Who We Are</h4>
               <p className="text-gray-300 leading-relaxed">
-                We can help you reimagine your business through a digital lens. Our software engineering heritage combined with our strategic business and innovation consulting, design thinking, and physical-digital capabilities provide real business value to our customers through human-centric innovation.
+                Rokify-Tech helps enterprises reimagine how they build and scale in a digital world. Our heritage in
+                software engineering, paired with strategy, experience design, and innovation consulting, turns complex
+                initiatives into products and platforms that create measurable business value.
               </p>
             </div>
 
@@ -691,9 +693,9 @@ export default function About() {
               {/* <h4 className="text-xl font-semibold text-white mb-4">What We Have Delivered Together</h4> */}
               <ul className="space-y-3">
                 {[
-                  'Success in AI, GenAI & innovation. Expansion in India, Europe, Ibero & LATAM markets. Deepened FSI Manufacturing, Healthcare & Life Sciences expertise.',
-                  'Rokify-Tech turns 12, expands to 2 countries, and is recognized as a leader in the IDC MarketScapes for Worldwide Experience Build Services, Worldwide Experience Design Services and Worldwide Software Engineering Services',
-                  'Recognized as a leader in the IDC MarketScapes for Worldwide Experience Build Services, Worldwide Experience Design Services and Worldwide Software Engineering Services',
+                  'Expanded AI, GenAI, and innovation practices with delivery across the US, EU, India, and LATAM.',
+                  'Deepened expertise in financial services, manufacturing, healthcare, and life sciences for enterprise clients.',
+                  'Recognized as a leader in IDC MarketScapes for Worldwide Experience Build, Experience Design, and Software Engineering Services.',
                 ].map((item, i) => (
                   <motion.li 
                     key={i} 
@@ -722,7 +724,8 @@ export default function About() {
           <motion.div variants={itemVariants} className="text-center mb-10">
             <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">Meet the Team</h4>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Each person owns a slice of the stack—so you get depth in engineering, design, automation, and growth without handoffs getting lost.
+              Senior specialists across engineering, design, automation, and growth—aligned under one delivery model so
+              your program moves fast without losing context.
             </p>
           </motion.div>
           <motion.div variants={itemVariants}>

@@ -119,7 +119,8 @@ export default function Testimonials() {
             </motion.span>
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            Case studies show how we work with global companies across industries, helping them improve systems, build new products, and scale their technology through long-term collaboration and reliable delivery.
+            Hear how Rokify-Tech partners with global organizations to modernize systems, launch new products, and scale
+            delivery through long-term collaboration.
           </p>
         </motion.div>
 

@@ -7,8 +7,8 @@ const projects = [
     id: 1,
     title: 'LuxeStyle Fashion',
     category: 'Shopify Store',
-    role: 'Full Stack Developer',
-    description: 'A premium fashion e-commerce store with custom Shopify theme, advanced filtering, wishlist functionality, and seamless checkout experience. Achieved 40% increase in conversion rate.',
+    role: 'E-Commerce Engineering',
+    description: 'Rokify-Tech delivered a premium fashion storefront with a custom Shopify theme, advanced filtering, wishlist, and optimized checkout—driving a 40% lift in conversion rate post-launch.',
     image: '/images/project-2.jpg',
     tags: ['Custom Theme', 'Wishlist', 'Quick View', 'Size Guide'],
     tech: ['Shopify', 'Liquid', 'JavaScript', 'SCSS', 'GraphQL'],
@@ -21,8 +21,8 @@ const projects = [
     id: 2,
     title: 'VitaBoost Supplements',
     category: 'E-Commerce Platform',
-    role: 'Full Stack Developer',
-    description: 'Health supplements store with subscription management, personalized recommendations, and integration with fulfillment APIs. Built custom app for recurring orders.',
+    role: 'Platform & Integrations',
+    description: 'Our team built a supplements platform with subscription management, personalized recommendations, fulfillment API integrations, and a custom app for recurring orders at scale.',
     image: '/images/project-3.jpg',
     tags: ['Subscriptions', 'Recommendations', 'Auto-Ship', 'Reviews'],
     tech: ['Shopify', 'React', 'Node.js', 'Stripe', 'Klaviyo'],
@@ -93,7 +93,7 @@ export default function Projects() {
             </motion.span>
           </h3>
           <p className="text-gray-300 max-w-2xl mx-auto text-lg">
-            A selection of e-commerce projects showcasing my expertise in building high-converting, scalable online stores.
+            Case studies from Rokify-Tech—high-converting commerce builds, platforms, and integrations delivered for brands worldwide.
           </p>
         </motion.div>
 

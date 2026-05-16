@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <ShoppingBag className="w-5 h-5 text-white" />
             </motion.div>
-            <span className="text-white">Hiroki Yamashita<span className="text-cyan-300">.</span></span>
+            <span className="text-white">Rokify-Tech<span className="text-cyan-300">.</span></span>
           </motion.a>
 
           {/* Nav Links */}
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-sm text-gray-500">
-            © {currentYear} Hiroki Yamashita. All rights reserved.
+            © {currentYear} Rokify-Tech. All rights reserved.
           </div>
         </div>
 
