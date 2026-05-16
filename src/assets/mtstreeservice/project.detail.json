@@ -1,0 +1,59 @@
+{
+  "project": {
+    "name": "MTS Tree Services Website",
+    "client": "MTS Tree Services",
+    "website": "https://www.mtstreeservice.com.au/",
+    "industry": "Tree Removal & Arborist Services",
+    "role": "Web Developer",
+    "description": "Supported the development and maintenance of the official website for MTS Tree Services, an Australian arborist and tree removal company with over 21 years of experience. Contributed to frontend optimization, media delivery, CDN integration, responsive UX improvements, and performance enhancements for a service-focused business platform. :contentReference[oaicite:0]{index=0}",
+    "responsibilities": [
+      "Developed and maintained responsive frontend components for the service website",
+      "Optimized website delivery and performance using Cloudflare and LiteSpeed infrastructure",
+      "Implemented media optimization workflows with Cloudinary",
+      "Enhanced SEO and social sharing functionality with Open Graph integration",
+      "Supported HTTP/3 configuration and modern web performance standards",
+      "Integrated Basin-powered lead generation and contact forms",
+      "Improved mobile responsiveness and user experience across service pages",
+      "Maintained scalable frontend architecture for local service marketing",
+      "Optimized image and digital asset management workflows",
+      "Supported ongoing website updates and technical maintenance"
+    ],
+    "technologies": {
+      "frontend": [
+        "JavaScript",
+        "HTML5",
+        "CSS3"
+      ],
+      "backend": [
+        "PHP"
+      ],
+      "infrastructure": [
+        "LiteSpeed",
+        "Cloudflare",
+        "HTTP/3"
+      ],
+      "cdn_and_media": [
+        "Cloudinary"
+      ],
+      "digital_asset_management": [
+        "Cloudinary"
+      ],
+      "form_builders": [
+        "Basin"
+      ],
+      "features": [
+        "Open Graph",
+        "Responsive Design",
+        "Performance Optimization",
+        "Lead Generation Forms"
+      ]
+    },
+    "highlights": [
+      "Supported a professional arborist and tree service company website",
+      "Improved website speed and media delivery performance",
+      "Enhanced mobile-first user experience and service inquiry flows",
+      "Implemented scalable cloud-based asset management",
+      "Contributed to SEO-friendly and high-performance web architecture"
+    ]
+  }
+}
