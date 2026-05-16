@@ -1,0 +1,62 @@
+{
+    "project": {
+      "name": "Martini Sportswear Ecommerce Platform",
+      "client": "Martini Sportswear",
+      "website": "https://www.martini-sportswear.com/de",
+      "industry": "Outdoor Sportswear & Ecommerce",
+      "role": "Web Developer",
+      "description": "Supported the development and maintenance of a multilingual ecommerce platform for an Austrian premium outdoor sportswear brand. Worked on frontend and backend improvements, ecommerce functionality, performance optimization, and responsive user experiences using Pimcore and modern web technologies.",
+      "responsibilities": [
+        "Developed and maintained Pimcore-based ecommerce features",
+        "Implemented responsive frontend components using Bootstrap and JavaScript",
+        "Optimized website performance and PWA behavior",
+        "Integrated product management and CMS workflows in Pimcore",
+        "Enhanced multilingual shopping experience across European markets",
+        "Maintained API integrations using Axios",
+        "Supported interactive UI animations using LottieFiles",
+        "Improved SEO and social sharing with Open Graph implementation",
+        "Worked with Nginx-based deployment environments",
+        "Integrated WhatsApp Business Chat for customer communication",
+        "Maintained reusable frontend utilities using Lodash and jQuery"
+      ],
+      "technologies": {
+        "cms": [
+          "Pimcore"
+        ],
+        "ecommerce": [
+          "Pimcore Ecommerce"
+        ],
+        "frontend": [
+          "Bootstrap 4.6.2",
+          "JavaScript",
+          "jQuery 3.7.1",
+          "Lodash 4.17.21",
+          "Axios",
+          "core-js 3.48.0"
+        ],
+        "backend": [
+          "PHP"
+        ],
+        "infrastructure": [
+          "Nginx",
+          "Reverse Proxy"
+        ],
+        "media": [
+          "VideoJS",
+          "LottieFiles"
+        ],
+        "features": [
+          "PWA",
+          "Open Graph",
+          "WhatsApp Business Chat"
+        ]
+      },
+      "highlights": [
+        "Supported a large-scale multilingual ecommerce platform",
+        "Improved frontend responsiveness and UX for outdoor product browsing",
+        "Worked on scalable Pimcore ecommerce architecture",
+        "Enhanced customer engagement and communication integrations",
+        "Contributed to performance optimization and modern web standards"
+      ]
+    }
+  }

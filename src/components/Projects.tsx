@@ -1,46 +1,13 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { ExternalLink, Github, ChevronLeft, ChevronRight, ShoppingCart, Zap, TrendingUp, Package, Sparkles } from 'lucide-react';
-
-const projects = [
-  {
-    id: 1,
-    title: 'LuxeStyle Fashion',
-    category: 'Shopify Store',
-    role: 'E-Commerce Engineering',
-    description: 'Rokify-Tech delivered a premium fashion storefront with a custom Shopify theme, advanced filtering, wishlist, and optimized checkout—driving a 40% lift in conversion rate post-launch.',
-    image: '/images/project-2.jpg',
-    tags: ['Custom Theme', 'Wishlist', 'Quick View', 'Size Guide'],
-    tech: ['Shopify', 'Liquid', 'JavaScript', 'SCSS', 'GraphQL'],
-    stats: { conversion: '+40%', speed: '1.2s', revenue: '$2.5M' },
-    links: { live: '#', github: '#' },
-    icon: ShoppingCart,
-    color: 'emerald',
-  },
-  {
-    id: 2,
-    title: 'VitaBoost Supplements',
-    category: 'E-Commerce Platform',
-    role: 'Platform & Integrations',
-    description: 'Our team built a supplements platform with subscription management, personalized recommendations, fulfillment API integrations, and a custom app for recurring orders at scale.',
-    image: '/images/project-3.jpg',
-    tags: ['Subscriptions', 'Recommendations', 'Auto-Ship', 'Reviews'],
-    tech: ['Shopify', 'React', 'Node.js', 'Stripe', 'Klaviyo'],
-    stats: { subscribers: '15K+', retention: '85%', ltv: '+60%' },
-    links: { live: '#', github: '#' },
-    icon: Zap,
-    color: 'cyan',
-  }
-];
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
+import { projects } from '../data/projects';
 
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
-  const [activeIndex, setActiveIndex] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
-  const nextProject = () => setActiveIndex((prev) => (prev + 1) % projects.length);
-  const prevProject = () => setActiveIndex((prev) => (prev - 1 + projects.length) % projects.length);
 
   return (
     <section id="projects" className="py-20 md:py-32 bg-[#0a0a12] relative overflow-hidden">
@@ -108,13 +75,12 @@ export default function Projects() {
               whileHover={{ y: -8 }}
               onHoverStart={() => setHoveredIndex(index)}
               onHoverEnd={() => setHoveredIndex(null)}
-              onClick={() => setActiveIndex(index)}
-              className={`group relative bg-gray-900/80 rounded-2xl border overflow-hidden cursor-pointer transition-all duration-500 ${
-                activeIndex === index 
-                  ? 'border-cyan-400 shadow-lg shadow-cyan-500/20' 
-                  : 'border-gray-700 hover:border-gray-700'
-              }`}
+              className="group relative bg-gray-900/80 rounded-2xl border border-gray-700 hover:border-cyan-400/50 overflow-hidden transition-all duration-500"
             >
+              <Link
+                to={`/projects/${project.slug}`}
+                className="block"
+              >
               {/* Image */}
               <div className="relative h-52 overflow-hidden">
                 <motion.img
@@ -140,15 +106,23 @@ export default function Projects() {
                 
                 {/* Links */}
                 <div className="absolute top-4 right-4 flex gap-2">
-                  <motion.a
-                    href={project.links.live}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="p-2.5 bg-gray-900/80/90 backdrop-blur-sm rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500 transition-all duration-300"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </motion.a>
+                  {project.links.live && (
+                    <motion.a
+                      href={project.links.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="p-2.5 bg-gray-900/80/90 backdrop-blur-sm rounded-lg text-gray-300 hover:text-white hover:bg-cyan-500 transition-all duration-300"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        window.open(project.links.live, '_blank', 'noopener,noreferrer');
+                      }}
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                    </motion.a>
+                  )}
                   {/* <motion.a
                     href={project.links.github}
                     whileHover={{ scale: 1.1 }}
@@ -192,14 +166,20 @@ export default function Projects() {
                 </div>
 
                 {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.slice(0, 4).map((t) => (
                     <span key={t} className="px-2.5 py-1 bg-gray-800/80 text-gray-300 text-xs rounded-lg">
                       {t}
                     </span>
                   ))}
                 </div>
+
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-300 group-hover:gap-2.5 transition-all">
+                  View case study
+                  <ArrowRight className="w-4 h-4" />
+                </span>
               </div>
+              </Link>
             </motion.div>
           ))}
         </div>

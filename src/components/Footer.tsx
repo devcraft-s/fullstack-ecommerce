@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { ShoppingBag, Heart } from 'lucide-react';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
-  { name: 'About', href: '#about' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Testimonials', href: '#testimonials' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Home', href: '/#home' },
+  { name: 'About', href: '/#about' },
+  { name: 'Projects', href: '/#projects' },
+  { name: 'Testimonials', href: '/#testimonials' },
+  { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <motion.a 
-            href="#home" 
+            href="/#home" 
             className="flex items-center gap-2 text-xl font-bold"
             whileHover={{ scale: 1.05 }}
           >
