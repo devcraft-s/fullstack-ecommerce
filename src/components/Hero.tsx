@@ -1,15 +1,6 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
-import { MapPin, ShoppingCart, Package, CreditCard, Truck, Store, BarChart3, Tag, Sparkles, Star } from 'lucide-react';
-
-const techStack = [
-  { name: 'Shopify', icon: '🛒' },
-  { name: 'React', icon: '⚛️' },
-  { name: 'Node.js', icon: '🟢' },
-  { name: 'TypeScript', icon: '🔷' },
-  { name: 'Python', icon: '🐍' },
-  { name: 'Tailwind', icon: '🎨' },
-];
+import { ShoppingCart, Package, CreditCard, Truck, Store, BarChart3, Tag, Sparkles } from 'lucide-react';
 
 const floatingIcons = [
   { Icon: ShoppingCart, x: 5, y: 15, size: 36, delay: 0 },
@@ -30,47 +21,6 @@ const roles = [
   'Technology Implementation',
   'Data Analytics',
 ];
-
-// Animated star component
-const AnimatedStar = ({ delay, x, y, size }: { delay: number; x: number; y: number; size: number }) => (
-  <motion.div
-    className="absolute"
-    style={{ left: `${x}%`, top: `${y}%` }}
-    initial={{ opacity: 0, scale: 0, rotate: 0 }}
-    animate={{ 
-      opacity: [0, 1, 1, 0],
-      scale: [0, 1, 1, 0],
-      rotate: [0, 180, 360],
-    }}
-    transition={{
-      duration: 4,
-      delay,
-      repeat: Infinity,
-      ease: 'easeInOut',
-    }}
-  >
-    <Star className="text-cyan-300 fill-cyan-300" style={{ width: size, height: size }} />
-  </motion.div>
-);
-
-// Floating particle
-const Particle = ({ delay, x }: { delay: number; x: number }) => (
-  <motion.div
-    className="absolute w-1 h-1 rounded-full bg-gradient-to-r from-cyan-300 to-purple-400"
-    style={{ left: `${x}%`, bottom: 0 }}
-    animate={{
-      y: [0, -800],
-      opacity: [0, 1, 1, 0],
-      scale: [0, 1.5, 1, 0],
-    }}
-    transition={{
-      duration: 8 + Math.random() * 4,
-      delay,
-      repeat: Infinity,
-      ease: 'linear',
-    }}
-  />
-);
 
 // Sparkle burst effect on click
 const SparkleEffect = ({ x, y }: { x: number; y: number }) => {
@@ -344,35 +294,6 @@ const AnimatedLetter = ({ letter, index, onClickEffect }: { letter: string; inde
   );
 };
 
-// Interactive tech stack badge with trace border
-const TechBadge = ({ tech, index, onClickEffect }: { tech: { name: string; icon: string }; index: number; onClickEffect: (e: React.MouseEvent) => void }) => {
-  const colors = ['cyan', 'purple', 'pink', 'cyan', 'purple', 'pink'];
-  
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.8 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ delay: 1.5 + index * 0.1, type: 'spring', stiffness: 200 }}
-    >
-      <TraceBorderCard className="rounded-xl" color={colors[index % colors.length]}>
-        <motion.div
-          className="px-4 py-2.5 bg-gray-800/70 backdrop-blur-sm rounded-xl text-sm font-medium text-gray-200 flex items-center gap-2 cursor-pointer select-none"
-          onClick={onClickEffect}
-          whileTap={{ scale: 0.9 }}
-        >
-          <motion.span
-            whileHover={{ rotate: 360, scale: 1.3 }}
-            transition={{ duration: 0.5 }}
-          >
-            {tech.icon}
-          </motion.span>
-          <span>{tech.name}</span>
-        </motion.div>
-      </TraceBorderCard>
-    </motion.div>
-  );
-};
-
 // Interactive button with moving border
 const InteractiveButton = ({ href, children, primary = false, onClickEffect }: { href: string; children: React.ReactNode; primary?: boolean; onClickEffect: (e: React.MouseEvent) => void }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -543,18 +464,6 @@ export default function Hero() {
     );
     return () => clearTimeout(timeout);
   }, [displayedText, isDeleting, currentRoleIndex]);
-
-  const stars = Array.from({ length: 25 }, () => ({
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    delay: Math.random() * 5,
-    size: 8 + Math.random() * 12,
-  }));
-
-  const particles = Array.from({ length: 40 }, () => ({
-    x: Math.random() * 100,
-    delay: Math.random() * 8,
-  }));
 
   const nameText = "THE GROWTH INVENTION COMPANY";
 

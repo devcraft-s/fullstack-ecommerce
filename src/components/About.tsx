@@ -3,9 +3,7 @@ import { useEffect, useId, useRef, useState } from 'react';
 import {
   Users,
   Award,
-  Clock,
   CheckCircle,
-  Handshake,
   Sparkles,
   Star,
   ChevronLeft,
@@ -14,12 +12,6 @@ import {
   Globe2,
   Trophy,
 } from 'lucide-react';
-
-const stats = [
-  { value: '12+', label: 'Years in Business', icon: '🚀' },
-  { value: '300+', label: 'IT Professionals', icon: '💼' },
-  { value: '9.3/10', label: 'Client Satisfaction', icon: '⭐' },
-];
 
 const teamMembers = [
   {
@@ -59,13 +51,6 @@ const qualities = [
   { icon: Award, stat: '4.8/5', label: 'Clutch Score with 30+ reviews', color: 'amber' as const },
   { icon: Globe2, stat: '2000+', label: 'Talent Pool Across 5 Countries', color: 'cyan' as const },
   { icon: Trophy, stat: '4x', label: "Voted Croatia's Best Employer", color: 'purple' as const },
-];
-
-const badges = [
-  { icon: Award, text: 'IDC MarketScape Leader' },
-  { icon: Clock, text: 'On-Time Delivery' },
-  { icon: CheckCircle, text: 'Quality Assured' },
-  { icon: Handshake, text: 'Long-Term Partnerships' },
 ];
 
 // const CO_FOUNDER_IMAGE = '/images/co-founder.jpg';
@@ -437,51 +422,6 @@ const TraceBorderCard = ({ children, className = '', color = 'cyan' }: { childre
       {/* Content */}
       <div className="relative z-10 h-full">
         {children}
-      </div>
-    </motion.div>
-  );
-};
-
-// Badge with border animation
-const AnimatedBadge = ({ icon: Icon, text, delay }: { icon: React.ElementType; text: string; delay: number }) => {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <motion.div
-      className="relative"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      whileHover={{ scale: 1.1, y: -3 }}
-    >
-      {/* Rotating border */}
-      <motion.div
-        className="absolute -inset-[1px] rounded-full"
-        style={{
-          background: 'linear-gradient(90deg, #22d3ee, #a78bfa, #f472b6, #22d3ee)',
-          backgroundSize: '300% 100%',
-        }}
-        animate={{
-          backgroundPosition: isHovered ? ['0% 50%', '300% 50%'] : '0% 50%',
-          opacity: isHovered ? 1 : 0,
-        }}
-        transition={{
-          backgroundPosition: { duration: 1.5, repeat: Infinity, ease: 'linear' },
-          opacity: { duration: 0.3 },
-        }}
-      />
-      
-      {/* Inner background */}
-      <div className="relative flex items-center gap-2 px-4 py-2 bg-gray-900/95 rounded-full border border-transparent">
-        <motion.div
-          animate={{ rotate: isHovered ? 360 : 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <Icon className="w-4 h-4 text-cyan-300" />
-        </motion.div>
-        <span className="text-gray-300 text-sm">{text}</span>
       </div>
     </motion.div>
   );
