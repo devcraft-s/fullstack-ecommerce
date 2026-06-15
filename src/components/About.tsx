@@ -61,13 +61,13 @@ type TeamMember = (typeof teamMembers)[number];
 function memberAvatarClass(color: TeamMember['color']) {
   switch (color) {
     case 'cyan':
-      return 'bg-cyan-500/20 text-cyan-200 ring-1 ring-cyan-400/40';
+      return 'bg-cyan-500/20 text-gray-900 ring-1 ring-cyan-400/40';
     case 'purple':
-      return 'bg-purple-500/20 text-purple-200 ring-1 ring-purple-400/40';
+      return 'bg-purple-500/20 text-gray-900 ring-1 ring-purple-400/40';
     case 'pink':
-      return 'bg-pink-500/20 text-pink-200 ring-1 ring-pink-400/40';
+      return 'bg-pink-500/20 text-gray-900 ring-1 ring-pink-400/40';
     default:
-      return 'bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40';
+      return 'bg-amber-500/20 text-gray-900 ring-1 ring-amber-400/40';
   }
 }
 
@@ -76,15 +76,15 @@ const TEAM_CAROUSEL_VISIBLE = 3;
 function TeamMemberCard({ member }: { member: TeamMember }) {
   return (
     <TraceBorderCard className="rounded-xl h-full min-h-[200px]" color={member.color}>
-      <div className="p-4 sm:p-5 md:p-6 bg-gray-900/80 rounded-xl h-full flex flex-col">
+      <div className="p-4 sm:p-5 md:p-6 bg-white rounded-xl h-full flex flex-col">
         <div
-          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-base sm:text-lg font-bold text-white mb-3 sm:mb-4 ${memberAvatarClass(member.color)}`}
+          className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl flex items-center justify-center text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4 ${memberAvatarClass(member.color)}`}
         >
           {member.initials}
         </div>
-        <h5 className="font-semibold text-white text-base sm:text-lg mb-1 leading-snug">{member.name}</h5>
-        <p className="text-xs sm:text-sm text-cyan-300/90 mb-2 sm:mb-3 leading-snug">{member.role}</p>
-        <p className="text-xs sm:text-sm text-gray-400 leading-relaxed flex-1 line-clamp-4 sm:line-clamp-none">{member.bio}</p>
+        <h5 className="font-semibold text-gray-900 text-base sm:text-lg mb-1 leading-snug">{member.name}</h5>
+        <p className="text-xs sm:text-sm text-cyan-600/90 mb-2 sm:mb-3 leading-snug">{member.role}</p>
+        <p className="text-xs sm:text-sm text-gray-500 leading-relaxed flex-1 line-clamp-4 sm:line-clamp-none">{member.bio}</p>
       </div>
     </TraceBorderCard>
   );
@@ -132,7 +132,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
             goNext();
           }
         }}
-        className="mx-auto w-full max-w-6xl overflow-hidden rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050508]"
+        className="mx-auto w-full max-w-6xl overflow-hidden rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
       >
         <motion.div
           className="flex"
@@ -159,7 +159,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
             type="button"
             onClick={goPrev}
             disabled={pageIndex === 0}
-            className="absolute z-20 left-0 top-1/2 hidden -translate-y-1/2 sm:flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-gray-900/90 text-cyan-300 shadow-lg backdrop-blur-sm transition hover:border-cyan-500/40 hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 disabled:pointer-events-none disabled:opacity-30"
+            className="absolute z-20 left-0 top-1/2 hidden -translate-y-1/2 sm:flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white text-cyan-600 shadow-lg backdrop-blur-sm transition hover:border-cyan-500/40 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 disabled:pointer-events-none disabled:opacity-30"
             aria-label="Previous team members"
             aria-controls={trackId}
           >
@@ -169,7 +169,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
             type="button"
             onClick={goNext}
             disabled={pageIndex >= maxIndex}
-            className="absolute z-20 right-0 top-1/2 hidden -translate-y-1/2 sm:flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-gray-900/90 text-cyan-300 shadow-lg backdrop-blur-sm transition hover:border-cyan-500/40 hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 disabled:pointer-events-none disabled:opacity-30"
+            className="absolute z-20 right-0 top-1/2 hidden -translate-y-1/2 sm:flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white text-cyan-600 shadow-lg backdrop-blur-sm transition hover:border-cyan-500/40 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 disabled:pointer-events-none disabled:opacity-30"
             aria-label="Next team members"
             aria-controls={trackId}
           >
@@ -185,7 +185,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
                 aria-selected={page === pageIndex}
                 aria-label={`Show team members page ${page + 1} of ${pageCount}`}
                 onClick={() => setIndex(page)}
-                className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050508] ${
+                className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 ${
                   page === pageIndex ? 'w-8 bg-cyan-400' : 'w-2 bg-gray-600 hover:bg-gray-500'
                 }`}
               />
@@ -197,7 +197,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
               type="button"
               onClick={goPrev}
               disabled={pageIndex === 0}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/90 text-cyan-300 disabled:opacity-30"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white text-cyan-600 disabled:opacity-30"
               aria-label="Previous team members"
             >
               <ChevronLeft className="w-5 h-5" />
@@ -206,7 +206,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
               type="button"
               onClick={goNext}
               disabled={pageIndex >= maxIndex}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-gray-900/90 text-cyan-300 disabled:opacity-30"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white text-cyan-600 disabled:opacity-30"
               aria-label="Next team members"
             >
               <ChevronRight className="w-5 h-5" />
@@ -288,7 +288,7 @@ const MovingBorderCard = ({ children, className = '' }: { children: React.ReactN
       />
       
       {/* Inner background */}
-      <div className="absolute inset-[2px] rounded-xl bg-gray-900/95 z-0" />
+      <div className="absolute inset-[2px] rounded-xl bg-white z-0" />
       
       {/* Glow effect */}
       {isHovered && (
@@ -339,7 +339,7 @@ const TraceBorderCard = ({ children, className = '', color = 'cyan' }: { childre
       transition={{ duration: 0.3 }}
     >
       {/* Base border */}
-      <div className="absolute inset-0 rounded-xl border border-gray-700" />
+      <div className="absolute inset-0 rounded-xl border border-gray-200" />
       
       {/* Animated tracing border */}
       {isHovered && (
@@ -459,7 +459,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 md:py-32 relative overflow-hidden">
       {/* Dark background - same as Home */}
-      <div className="absolute inset-0 bg-[#050508]" />
+      <div className="absolute inset-0 bg-slate-50" />
 
       {/* Animated mesh gradient - same as Home */}
       <motion.div 
@@ -562,13 +562,13 @@ export default function About() {
             transition={{ type: 'spring', bounce: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/40 mb-6"
           >
-            <Sparkles className="w-4 h-4 text-cyan-300" />
-            <span className="text-cyan-300 text-sm font-medium">About Us</span>
+            <Sparkles className="w-4 h-4 text-cyan-600" />
+            <span className="text-cyan-600 text-sm font-medium">About Us</span>
           </motion.div>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             A{' '}
             <motion.span 
-              className="bg-gradient-to-r from-cyan-300 via-purple-300 to-pink-300 bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent"
               animate={{
                 textShadow: [
                   '0 0 20px rgba(34, 211, 238, 0.3)',
@@ -581,7 +581,7 @@ export default function About() {
               Globally Integrated Team
             </motion.span>
           </h3>
-          <p className="text-gray-300 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
             Rokify-Tech brings designers, engineers, and growth specialists together—shipping digital products,
             commerce platforms, and the measurement to prove what works.
           </p>
@@ -595,7 +595,7 @@ export default function About() {
         >
           <motion.div variants={itemVariants}>
             <MovingBorderCard className="rounded-2xl">
-              <div className="bg-gray-900/80 rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-black/40">
+              <div className="bg-white rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl shadow-black/40">
                 <motion.div
                   className="relative aspect-[5/4] sm:aspect-[4/3] bg-gray-800"
                   initial={{ opacity: 0, scale: 1.02 }}
@@ -621,8 +621,8 @@ export default function About() {
           {/* Content */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div>
-              <h4 className="text-xl font-semibold text-white mb-3">Who We Are</h4>
-              <p className="text-gray-300 leading-relaxed">
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Who We Are</h4>
+              <p className="text-gray-600 leading-relaxed">
                 Rokify-Tech helps enterprises reimagine how they build and scale in a digital world. Our heritage in
                 software engineering, paired with strategy, experience design, and innovation consulting, turns complex
                 initiatives into products and platforms that create measurable business value.
@@ -639,13 +639,13 @@ export default function About() {
                 ].map((item, i) => (
                   <motion.li 
                     key={i} 
-                    className="flex items-start gap-3 text-gray-300"
+                    className="flex items-start gap-3 text-gray-600"
                     initial={{ opacity: 0, x: -20 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.8 + i * 0.1 }}
                     whileHover={{ x: 5, color: '#22d3ee' }}
                   >
-                    <CheckCircle className="w-5 h-5 text-cyan-300 flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </motion.li>
                 ))}
@@ -662,8 +662,8 @@ export default function About() {
           className="mt-20"
         >
           <motion.div variants={itemVariants} className="text-center mb-10">
-            <h4 className="text-2xl md:text-3xl font-bold text-white mb-3">Meet the Team</h4>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <h4 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Meet the Team</h4>
+            <p className="text-gray-500 max-w-2xl mx-auto">
               Senior specialists across engineering, design, automation, and growth—aligned under one delivery model so
               your program moves fast without losing context.
             </p>
@@ -682,7 +682,7 @@ export default function About() {
         >
           {qualities.map(({ icon: Icon, stat, label, color }) => (
             <TraceBorderCard key={label} className="rounded-xl" color={color}>
-              <div className="p-6 bg-gray-900/80 rounded-xl h-full flex flex-col">
+              <div className="p-6 bg-white rounded-xl h-full flex flex-col">
                 <motion.div
                   className={`mb-4 flex h-12 w-12 items-center justify-center rounded-xl ${
                     color === 'cyan'
@@ -699,21 +699,21 @@ export default function About() {
                   <Icon
                     className={`h-6 w-6 ${
                       color === 'cyan'
-                        ? 'text-cyan-300'
+                        ? 'text-cyan-600'
                         : color === 'purple'
-                          ? 'text-purple-300'
+                          ? 'text-purple-600'
                           : color === 'pink'
-                            ? 'text-pink-300'
-                            : 'text-amber-300'
+                            ? 'text-pink-600'
+                            : 'text-amber-600'
                     }`}
                   />
                 </motion.div>
-                <p className="mb-2 text-2xl font-bold leading-none tracking-tight text-white sm:text-3xl">
-                  <span className="bg-gradient-to-r from-cyan-200 via-purple-200 to-pink-200 bg-clip-text text-transparent">
+                <p className="mb-2 text-2xl font-bold leading-none tracking-tight text-gray-900 sm:text-3xl">
+                  <span className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                     {stat}
                   </span>
                 </p>
-                <p className="text-sm leading-snug text-gray-400">{label}</p>
+                <p className="text-sm leading-snug text-gray-500">{label}</p>
               </div>
             </TraceBorderCard>
           ))}
@@ -728,7 +728,7 @@ export default function About() {
         >
           {stats.map(({ value, label, icon }, index) => (
             <TraceBorderCard key={label} className="rounded-xl" color={['cyan', 'purple', 'pink'][index]}>
-              <div className="text-center p-6 bg-gray-900/80 rounded-xl h-full">
+              <div className="text-center p-6 bg-white rounded-xl h-full">
                 <motion.div 
                   className="text-3xl mb-2"
                   animate={{ y: [0, -5, 0] }}
@@ -737,7 +737,7 @@ export default function About() {
                   {icon}
                 </motion.div>
                 <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-purple-300 bg-clip-text text-transparent mb-1">{value}</div>
-                <div className="text-sm text-gray-400">{label}</div>
+                <div className="text-sm text-gray-500">{label}</div>
               </div>
             </TraceBorderCard>
           ))}

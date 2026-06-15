@@ -641,7 +641,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Gradient subtitle with glow */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -668,7 +668,7 @@ export default function Hero() {
                 with technology deployments in 150+ countries
               </motion.h2>
             </TraceBorderCard>
-          </motion.div>
+          </motion.div> */}
 
           {/* Typewriter role */}
           <motion.div
