@@ -7,7 +7,7 @@ const testimonials = [
     id: 1,
     name: 'Sarah Mitchell',
     role: 'Chief Digital Officer',
-    company: 'LuxeStyle Fashion · UK',
+    company: 'LuxeStyle Fashion · USA',
     avatar: 'SM',
     rating: 5,
     text: 'They reimagined our commerce stack end to end—new storefront, integrations, and analytics. Within two quarters we saw a measurable lift in conversion and a much clearer picture of what drives revenue across markets.',
@@ -18,7 +18,7 @@ const testimonials = [
     id: 2,
     name: 'Michael Chen',
     role: 'VP of Product',
-    company: 'VitaBoost Health · Singapore',
+    company: 'VitaBoost Health · Canada',
     avatar: 'MC',
     rating: 5,
     text: 'Our subscription and fulfillment workflows were fragmented. The team designed automation around recurring orders and CRM syncs so we could scale past 15,000 active subscribers without adding headcount.',
@@ -40,7 +40,7 @@ const testimonials = [
     id: 4,
     name: 'David Park',
     role: 'Co-Founder',
-    company: 'TechGear Pro · EU',
+    company: 'TechGear Pro · USA',
     avatar: 'DP',
     rating: 5,
     text: 'Building a multi-vendor marketplace is hard; payouts, commissions, and vendor tooling have to be right. They owned the architecture and delivery, and we now run hundreds of daily transactions with confidence.',
@@ -119,7 +119,7 @@ export default function Testimonials() {
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Hear how Rokify-Tech partners with global organizations to modernize systems, launch new products, and scale
+            Hear how Rokify-Tech partners with North American organizations to modernize systems, launch new products, and scale
             delivery through long-term collaboration.
           </p>
         </motion.div>

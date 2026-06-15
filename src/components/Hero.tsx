@@ -17,7 +17,7 @@ const roles = [
   'Design & Development',
   'AI Integration & Automation',
   'Digital Marketing',
-  'Global Business Strategy',
+  'North America Market Strategy',
   'Technology Implementation',
   'Data Analytics',
 ];
@@ -766,9 +766,9 @@ export default function Hero() {
               onClick={addSparkleEffect}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
-              globally integrated team
+              United States team
             </motion.span>{' '}
-            with the value of localized support in key regions around the world.
+            with the value of localized support across North America.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -779,7 +779,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
           >
             <InteractiveButton href="#projects" primary onClickEffect={addSparkleEffect}>
-              Proven Results for Global Clients
+              Proven Results for North American Clients
               <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
                 →
               </motion.span>

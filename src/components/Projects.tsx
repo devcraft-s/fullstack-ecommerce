@@ -60,7 +60,7 @@ export default function Projects() {
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Case studies from Rokify-Tech—high-converting commerce builds, platforms, and integrations delivered for brands worldwide.
+            Case studies from Rokify-Tech—high-converting commerce builds, platforms, and integrations delivered for brands across North America.
           </p>
         </motion.div>
 
