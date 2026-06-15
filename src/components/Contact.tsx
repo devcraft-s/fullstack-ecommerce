@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 bg-violet-100 relative overflow-hidden">
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]"
         style={{ background: 'radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%)', filter: 'blur(80px)' }}
@@ -284,7 +284,7 @@ export default function Contact() {
                   <span className="font-semibold text-cyan-600">Taking new client work</span>
                 </motion.div>
                 <p className="text-sm text-gray-600">
-                  Rokify-Tech is accepting new engagements for product builds, commerce programs, and long-term
+                  USZIZO is accepting new engagements for product builds, commerce programs, and long-term
                   engineering partnerships. Share your brief and we will route it to the right practice lead.
                 </p>
               </motion.div>

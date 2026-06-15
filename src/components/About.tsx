@@ -132,7 +132,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
             goNext();
           }
         }}
-        className="mx-auto w-full max-w-6xl overflow-hidden rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+        className="mx-auto w-full max-w-6xl overflow-hidden rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-amber-100"
       >
         <motion.div
           className="flex"
@@ -185,7 +185,7 @@ function TeamCarousel({ members }: { members: typeof teamMembers }) {
                 aria-selected={page === pageIndex}
                 aria-label={`Show team members page ${page + 1} of ${pageCount}`}
                 onClick={() => setIndex(page)}
-                className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 ${
+                className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-amber-100 ${
                   page === pageIndex ? 'w-8 bg-cyan-400' : 'w-2 bg-gray-600 hover:bg-gray-500'
                 }`}
               />
@@ -459,7 +459,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 md:py-32 relative overflow-hidden">
       {/* Dark background - same as Home */}
-      <div className="absolute inset-0 bg-slate-50" />
+      <div className="absolute inset-0 bg-amber-100" />
 
       {/* Animated mesh gradient - same as Home */}
       <motion.div 
@@ -582,7 +582,7 @@ export default function About() {
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Rokify-Tech brings designers, engineers, and growth specialists together—shipping digital products,
+            USZIZO brings designers, engineers, and growth specialists together—shipping digital products,
             commerce platforms, and the measurement to prove what works.
           </p>
         </motion.div>
@@ -604,7 +604,7 @@ export default function About() {
                 >
                   <img
                     src={CO_FOUNDER_IMAGE}
-                    alt="Rokify-Tech leadership team"
+                    alt="USZIZO leadership team"
                     className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
                     loading="lazy"
                     decoding="async"
@@ -623,7 +623,7 @@ export default function About() {
             <div>
               <h4 className="text-xl font-semibold text-gray-900 mb-3">Who We Are</h4>
               <p className="text-gray-600 leading-relaxed">
-                Rokify-Tech helps enterprises reimagine how they build and scale in a digital world. Our heritage in
+                USZIZO helps enterprises reimagine how they build and scale in a digital world. Our heritage in
                 software engineering, paired with strategy, experience design, and innovation consulting, turns complex
                 initiatives into products and platforms that create measurable business value.
               </p>
@@ -640,9 +640,9 @@ export default function About() {
                   <motion.li 
                     key={i} 
                     className="flex items-start gap-3 text-gray-600"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ delay: 0.8 + i * 0.1 }}
+                    // initial={{ opacity: 0, x: -20 }}
+                    // animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    // transition={{ delay: 0.8 + i * 0.1 }}
                     whileHover={{ x: 5, color: '#22d3ee' }}
                   >
                     <CheckCircle className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />

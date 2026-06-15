@@ -58,7 +58,7 @@ export default function Testimonials() {
   const prevTestimonial = () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+    <section id="testimonials" className="py-20 md:py-32 bg-rose-100 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div 
@@ -119,7 +119,7 @@ export default function Testimonials() {
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Hear how Rokify-Tech partners with North American organizations to modernize systems, launch new products, and scale
+            Hear how USZIZO partners with North American organizations to modernize systems, launch new products, and scale
             delivery through long-term collaboration.
           </p>
         </motion.div>

@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <ShoppingBag className="w-5 h-5 text-white" />
             </motion.div>
-            <span className="text-white">Rokify-Tech<span className="text-cyan-300">.</span></span>
+            <span className="text-white">USZIZO<span className="text-cyan-300">.</span></span>
           </motion.a>
 
           {/* Nav Links */}
@@ -51,11 +51,11 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="text-sm text-gray-500">
-            © {currentYear} Rokify-Tech. All rights reserved.
+            © {currentYear} USZIZO. All rights reserved.
           </div>
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           className="mt-8 pt-8 border-t border-gray-700 text-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -67,7 +67,7 @@ export default function Footer() {
             <span className="text-cyan-400">TypeScript</span> &
             <span className="text-pink-300">Tailwind CSS</span>
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </footer>
   );

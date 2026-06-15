@@ -10,7 +10,7 @@ export default function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-slate-50 relative overflow-hidden">
+    <section id="projects" className="py-20 md:py-32 bg-cyan-100 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div 
@@ -60,7 +60,7 @@ export default function Projects() {
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Case studies from Rokify-Tech—high-converting commerce builds, platforms, and integrations delivered for brands across North America.
+            Case studies from USZIZO—high-converting commerce builds, platforms, and integrations delivered for brands across North America.
           </p>
         </motion.div>
 

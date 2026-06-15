@@ -749,7 +749,7 @@ export default function Hero() {
               onClick={addSparkleEffect}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              Rokify-Tech
+              USZIZO
             </motion.span>{' '}
             combines the comprehensive experience of a {' '}
             <motion.span 
