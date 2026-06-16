@@ -11,19 +11,6 @@ export default function Projects() {
 
   return (
     <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-amber-50 via-orange-50 to-rose-50 relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }}
-        />
-      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}

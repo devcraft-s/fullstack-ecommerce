@@ -61,16 +61,6 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 md:py-32 bg-gradient-to-b from-rose-50 via-pink-50 to-violet-50 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div 
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px)
-            `,
-            backgroundSize: '60px 60px',
-          }}
-        />
         <motion.div
           className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px]"
           style={{ background: 'radial-gradient(ellipse, rgba(6, 182, 212, 0.08) 0%, transparent 70%)', filter: 'blur(60px)' }}

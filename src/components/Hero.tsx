@@ -496,17 +496,6 @@ export default function Hero() {
         transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
       />
 
-      {/* Grid pattern */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-        }}
-      />
 
       {/* Animated glow orbs */}
       <motion.div

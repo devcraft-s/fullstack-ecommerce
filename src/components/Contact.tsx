@@ -47,17 +47,6 @@ export default function Contact() {
         transition={{ duration: 10, repeat: Infinity }}
       />
 
-      <motion.div
-        className="absolute inset-0"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(34, 211, 238, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 211, 238, 0.03) 1px, transparent 1px)
-          `,
-          backgroundSize: '60px 60px',
-        }}
-      />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <motion.div
           ref={ref}
