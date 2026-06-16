@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ShoppingBag, Heart } from 'lucide-react';
+import { ShoppingBag } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', href: '/#home' },

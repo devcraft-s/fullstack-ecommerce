@@ -1,6 +1,7 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useState, useRef } from 'react';
 import { ShoppingCart, Package, CreditCard, Truck, Store, BarChart3, Tag, Sparkles } from 'lucide-react';
+import logo from '../assets/logo/logo.png';
 
 const floatingIcons = [
   { Icon: ShoppingCart, x: 5, y: 15, size: 36, delay: 0 },
@@ -611,6 +612,35 @@ export default function Hero() {
         style={{ rotateX, rotateY, transformStyle: 'preserve-3d' }}
       >
         <div className="text-center" style={{ transform: 'translateZ(50px)' }}>
+          {/* Brand logo */}
+          <motion.div
+            initial={{ opacity: 0, y: -20, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.6, type: 'spring', bounce: 0.4 }}
+            className="mb-8 flex justify-center"
+          >
+            <motion.div
+              className="relative"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+            >
+              {/* Glow behind logo */}
+              <div
+                className="absolute inset-0 rounded-2xl blur-2xl opacity-50"
+                style={{ background: 'linear-gradient(135deg, #22d3ee, #a78bfa, #f472b6)' }}
+              />
+              <motion.img
+                src={logo}
+                alt="USZIZO logo"
+                className="relative h-16 sm:h-20 md:h-24 w-auto object-contain select-none"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.97 }}
+                onClick={addSparkleEffect}
+                style={{ cursor: 'pointer' }}
+              />
+            </motion.div>
+          </motion.div>
+
           {/* Status badge */}
           <div className="mb-8 flex justify-center">
             <StatusBadge onClickEffect={addSparkleEffect} />
