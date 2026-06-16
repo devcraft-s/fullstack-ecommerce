@@ -43,7 +43,7 @@ export default function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.6, type: 'spring' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-gray-700/50' : ''
+          isScrolled ? 'bg-white/80 backdrop-blur-xl border-b border-gray-200/70' : ''
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,7 +61,7 @@ export default function Navbar() {
               >
                 <ShoppingBag className="w-5 h-5 text-white" />
               </motion.div> */}
-              <span className="text-white">USZIZO<span className="text-cyan-300">.</span></span>
+              <span className="text-gray-900">USZIZO<span className="text-cyan-600">.</span></span>
             </motion.a>
 
             <div className="hidden md:flex items-center gap-1">
@@ -75,8 +75,8 @@ export default function Navbar() {
                   whileHover={{ y: -2 }}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
                     activeSection === link.href.replace(/^\/?#/, '')
-                      ? 'text-cyan-300 bg-cyan-500/20'
-                      : 'text-gray-400 hover:text-white hover:bg-gray-800/50'
+                      ? 'text-cyan-600 bg-cyan-500/20'
+                      : 'text-gray-600 hover:text-cyan-600 hover:bg-gray-100'
                   }`}
                 >
                   {link.name}
@@ -96,7 +96,7 @@ export default function Navbar() {
             </div>
 
             <motion.button
-              className="md:hidden p-2 text-gray-400"
+              className="md:hidden p-2 text-gray-900"
               onClick={() => setIsMobileMenuOpen(true)}
               whileTap={{ scale: 0.9 }}
             >
@@ -112,7 +112,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-[#050508]/98 backdrop-blur-xl md:hidden"
+            className="fixed inset-0 z-50 bg-white/95 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col h-full p-6">
               <div className="flex justify-between items-center mb-8">
@@ -120,11 +120,11 @@ export default function Navbar() {
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-400 flex items-center justify-center">
                     <ShoppingBag className="w-5 h-5 text-white" />
                   </div>
-                  <span className="text-white">USZIZO<span className="text-cyan-300">.</span></span>
+                  <span className="text-gray-900">USZIZO<span className="text-cyan-600">.</span></span>
                 </a>
                 <motion.button
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="p-2 text-gray-400"
+                  className="p-2 text-gray-900"
                   whileTap={{ scale: 0.9 }}
                 >
                   <X className="w-6 h-6" />
@@ -140,7 +140,7 @@ export default function Navbar() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="px-4 py-3 text-lg font-medium text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-lg transition-colors"
+                    className="px-4 py-3 text-lg font-medium text-gray-600 hover:text-cyan-600 hover:bg-gray-100 rounded-lg transition-colors"
                   >
                     {link.name}
                   </motion.a>

@@ -58,7 +58,7 @@ export default function Testimonials() {
   const prevTestimonial = () => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-rose-100 relative overflow-hidden">
+    <section id="testimonials" className="py-20 md:py-32 bg-gradient-to-b from-rose-50 via-pink-50 to-violet-50 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div 

@@ -10,7 +10,7 @@ export default function Projects() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-cyan-100 relative overflow-hidden">
+    <section id="projects" className="py-20 md:py-32 bg-gradient-to-b from-amber-50 via-orange-50 to-rose-50 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div 

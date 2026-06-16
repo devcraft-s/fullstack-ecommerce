@@ -459,7 +459,7 @@ export default function About() {
   return (
     <section id="about" className="py-20 md:py-32 relative overflow-hidden">
       {/* Dark background - same as Home */}
-      <div className="absolute inset-0 bg-amber-100" />
+      <div className="absolute inset-0 bg-gradient-to-b from-cyan-50 via-sky-50 to-amber-50" />
 
       {/* Animated mesh gradient - same as Home */}
       <motion.div 

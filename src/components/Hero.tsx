@@ -85,7 +85,7 @@ const MovingBorderCard = ({ children, className = '' }: { children: React.ReactN
       />
       
       {/* Inner background */}
-      <div className="absolute inset-[2px] rounded-xl bg-gray-900/95 z-0" />
+      <div className="absolute inset-[2px] rounded-xl bg-white z-0" />
       
       {/* Glow effect */}
       {isHovered && (
@@ -136,7 +136,7 @@ const TraceBorderCard = ({ children, className = '', color = 'cyan' }: { childre
       transition={{ duration: 0.3 }}
     >
       {/* Base border */}
-      <div className="absolute inset-0 rounded-xl border border-gray-700" />
+      <div className="absolute inset-0 rounded-xl border border-gray-200" />
       
       {/* Animated tracing border */}
       {isHovered && (
@@ -236,16 +236,16 @@ const AnimatedLetter = ({ letter, index, onClickEffect }: { letter: string; inde
 
   return (
     <motion.span
-      className="inline-block text-white cursor-pointer select-none"
+      className="inline-block text-gray-900 cursor-pointer select-none"
       initial={{ opacity: 0, y: 50, rotateX: -90 }}
-      animate={{ 
-        opacity: 1, 
-        y: 0, 
+      animate={{
+        opacity: 1,
+        y: 0,
         rotateX: 0,
         textShadow: [
-          '0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(34, 211, 238, 0.2)',
-          '0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(34, 211, 238, 0.4), 0 0 60px rgba(167, 139, 250, 0.3)',
-          '0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(34, 211, 238, 0.2)',
+          '0 0 10px rgba(34, 211, 238, 0.15), 0 0 20px rgba(34, 211, 238, 0.1)',
+          '0 0 20px rgba(34, 211, 238, 0.25), 0 0 40px rgba(167, 139, 250, 0.2)',
+          '0 0 10px rgba(34, 211, 238, 0.15), 0 0 20px rgba(34, 211, 238, 0.1)',
         ],
         filter: [
           'brightness(1)',
@@ -254,7 +254,7 @@ const AnimatedLetter = ({ letter, index, onClickEffect }: { letter: string; inde
         ],
         scale: isClicked ? [1, 1.5, 1] : 1,
         rotate: isClicked ? [0, -10, 10, 0] : 0,
-        color: isClicked ? '#22d3ee' : '#ffffff',
+        color: isClicked ? '#22d3ee' : '#111827',
       }}
       transition={{
         duration: 0.5,
@@ -351,7 +351,7 @@ const InteractiveButton = ({ href, children, primary = false, onClickEffect }: {
     <TraceBorderCard className="rounded-xl" color="purple">
       <motion.a
         href={href}
-        className="relative block px-8 py-4 bg-gray-900/80 rounded-xl font-semibold text-lg text-white overflow-hidden"
+        className="relative block px-8 py-4 bg-white rounded-xl font-semibold text-lg text-gray-900 overflow-hidden"
         whileTap={{ scale: 0.95 }}
         onClick={handleClick}
       >
@@ -383,7 +383,7 @@ const StatusBadge = ({ onClickEffect }: { onClickEffect: (e: React.MouseEvent) =
     >
       <MovingBorderCard className="rounded-full inline-block">
         <motion.div
-          className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/90 rounded-full backdrop-blur-sm cursor-pointer select-none"
+          className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full backdrop-blur-sm cursor-pointer select-none"
           whileTap={{ scale: 0.95 }}
           onClick={onClickEffect}
         >
@@ -392,7 +392,7 @@ const StatusBadge = ({ onClickEffect }: { onClickEffect: (e: React.MouseEvent) =
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-cyan-300"></span>
           </span>
           <motion.span 
-            className="text-cyan-200 text-sm font-semibold"
+            className="text-cyan-600 text-sm font-semibold"
             animate={{ 
               textShadow: [
                 '0 0 10px rgba(34, 211, 238, 0.5)',
@@ -480,7 +480,7 @@ export default function Hero() {
       ))}
 
       {/* Dark background */}
-      <div className="absolute inset-0 bg-[#050508]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-sky-50 to-cyan-50" />
       
       {/* Animated mesh gradient */}
       <motion.div 
@@ -501,8 +501,8 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(34, 211, 238, 0.12) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(34, 211, 238, 0.12) 1px, transparent 1px)
+            linear-gradient(rgba(34, 211, 238, 0.08) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(34, 211, 238, 0.08) 1px, transparent 1px)
           `,
           backgroundSize: '60px 60px',
         }}
@@ -598,7 +598,7 @@ export default function Hero() {
               />
               <Icon
                 style={{ width: size, height: size }}
-                className="text-cyan-300 relative z-10"
+                className="text-cyan-500 relative z-10"
                 strokeWidth={1.5}
               />
             </motion.div>
@@ -708,7 +708,7 @@ export default function Hero() {
             className="h-8 flex items-center justify-center mb-6"
           >
             <motion.p 
-              className="text-lg text-gray-200 font-medium cursor-pointer select-none"
+              className="text-lg text-gray-700 font-medium cursor-pointer select-none"
               whileHover={{ scale: 1.1, color: '#22d3ee' }}
               onClick={addSparkleEffect}
             >
@@ -762,11 +762,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
-            className="text-lg text-gray-300 max-w-2xl mx-auto mb-10 mt-8 leading-relaxed"
+            className="text-lg text-gray-600 max-w-2xl mx-auto mb-10 mt-8 leading-relaxed"
           >
             Strategically positioned for enterprise support, {' '}
             <motion.span 
-              className="text-cyan-300 font-bold cursor-pointer select-none"
+              className="text-cyan-600 font-bold cursor-pointer select-none"
               animate={{
                 textShadow: [
                   '0 0 10px rgba(34, 211, 238, 0.5)',
@@ -783,7 +783,7 @@ export default function Hero() {
             </motion.span>{' '}
             combines the comprehensive experience of a {' '}
             <motion.span 
-              className="text-purple-300 font-bold cursor-pointer select-none"
+              className="text-purple-600 font-bold cursor-pointer select-none"
               animate={{
                 textShadow: [
                   '0 0 10px rgba(167, 139, 250, 0.5)',
