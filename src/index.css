@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode: toggled via the `dark` class on <html>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-background: #0a0a12;
   --color-foreground: #ffffff;
@@ -39,9 +42,14 @@ html {
 }
 
 body {
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: var(--font-sans);
+}
+
+.dark body {
   background-color: #0a0a12;
   color: #f8fafc;
-  font-family: var(--font-sans);
 }
 
 ::-webkit-scrollbar {
@@ -49,15 +57,27 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a12;
+  background: #f1f5f9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #374151;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0a0a12;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
   background: #4b5563;
 }
 

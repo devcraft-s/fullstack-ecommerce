@@ -39,7 +39,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-violet-50 via-indigo-50 to-white relative overflow-hidden">
+    <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-violet-50 via-indigo-50 to-white dark:from-[#0a0a12] dark:via-[#0b1120] dark:to-[#0a0a12] relative overflow-hidden">
       <motion.div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]"
         style={{ background: 'radial-gradient(circle, rgba(34, 211, 238, 0.08) 0%, transparent 70%)', filter: 'blur(80px)' }}
@@ -61,13 +61,13 @@ export default function Contact() {
             transition={{ type: 'spring', bounce: 0.5, delay: 0.2 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/40 mb-6"
           >
-            <Sparkles className="w-4 h-4 text-cyan-600" />
-            <span className="text-cyan-600 text-sm font-medium">Get In Touch</span>
+            <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
+            <span className="text-cyan-600 dark:text-cyan-400 text-sm font-medium">Get In Touch</span>
           </motion.div>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Let&apos;s{' '}
             <motion.span
-              className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 bg-clip-text text-transparent inline-block"
+              className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 dark:from-cyan-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent inline-block"
               animate={{
                 textShadow: [
                   '0 0 20px rgba(6, 182, 212, 0.3)',
@@ -81,7 +81,7 @@ export default function Contact() {
               Work Together
             </motion.span>
           </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">
             Tell us about your product, platform, or commerce initiative. Our team will respond with next steps and the
             right specialists for your scope.
           </p>
@@ -99,8 +99,8 @@ export default function Contact() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-12"
           >
-            <h4 className="text-xl font-semibold text-gray-900">Contact Information</h4>
-            <h4 className="text-xl font-semibold text-gray-900">Send a Message</h4>
+            <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Contact Information</h4>
+            <h4 className="text-xl font-semibold text-gray-900 dark:text-white">Send a Message</h4>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -111,7 +111,7 @@ export default function Contact() {
               className="order-1 lg:order-2"
             >
               <motion.div
-                className="bg-white rounded-2xl border border-gray-200 p-6 md:p-8"
+                className="bg-white dark:bg-slate-900 rounded-2xl border border-gray-200 dark:border-white/10 p-6 md:p-8"
                 whileHover={{ boxShadow: '0 20px 40px rgba(34, 211, 238, 0.1)' }}
               >
                 {isSubmitted ? (
@@ -125,10 +125,10 @@ export default function Contact() {
                       animate={{ scale: [1, 1.2, 1] }}
                       transition={{ duration: 0.5 }}
                     >
-                      <CheckCircle className="w-8 h-8 text-cyan-600" />
+                      <CheckCircle className="w-8 h-8 text-cyan-600 dark:text-cyan-400" />
                     </motion.div>
-                    <h5 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h5>
-                    <p className="text-gray-600">Thank you for reaching out. A member of our team will respond shortly.</p>
+                    <h5 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h5>
+                    <p className="text-gray-600 dark:text-gray-300">Thank you for reaching out. A member of our team will respond shortly.</p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
@@ -142,7 +142,7 @@ export default function Contact() {
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.5 + index * 0.1 }}
                       >
-                        <label htmlFor={field.id} className="block text-sm font-medium text-gray-600 mb-2">
+                        <label htmlFor={field.id} className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                           {field.label}
                         </label>
                         <input
@@ -151,7 +151,7 @@ export default function Contact() {
                           value={formState[field.id as keyof typeof formState]}
                           onChange={(e) => setFormState({ ...formState, [field.id]: e.target.value })}
                           required
-                          className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-gray-900 placeholder-gray-400 transition-all duration-300"
+                          className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-gray-200 dark:border-white/10 rounded-xl focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-all duration-300"
                           placeholder={field.placeholder}
                         />
                       </motion.div>
@@ -161,7 +161,7 @@ export default function Contact() {
                       animate={isInView ? { opacity: 1, y: 0 } : {}}
                       transition={{ delay: 0.7 }}
                     >
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-600 mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-600 dark:text-gray-300 mb-2">
                         Message
                       </label>
                       <textarea
@@ -170,7 +170,7 @@ export default function Contact() {
                         onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                         required
                         rows={7}
-                        className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-gray-900 placeholder-gray-400 transition-all duration-300 resize-none"
+                        className="w-full px-4 py-3 bg-white dark:bg-slate-900 border border-gray-200 dark:border-white/10 rounded-xl focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 transition-all duration-300 resize-none"
                         placeholder="Tell us about your project, timeline, and goals..."
                       />
                     </motion.div>
@@ -216,18 +216,18 @@ export default function Contact() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.4 + index * 0.1 }}
                     whileHover={{ scale: 1.02, x: 5 }}
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-cyan-400/50 transition-all duration-300 group"
+                    className="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 rounded-xl border border-gray-200 dark:border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                   >
                     <motion.div
                       className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
                     >
-                      <Icon className="w-5 h-5 text-cyan-600" />
+                      <Icon className="w-5 h-5 text-cyan-600 dark:text-cyan-400" />
                     </motion.div>
                     <div>
-                      <div className="text-sm text-gray-500">{label}</div>
-                      <div className="font-medium text-gray-600 group-hover:text-gray-900 transition-colors">
+                      <div className="text-sm text-gray-500 dark:text-gray-400">{label}</div>
+                      <div className="font-medium text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                         {value}
                       </div>
                     </div>
@@ -236,7 +236,7 @@ export default function Contact() {
               </motion.div>
 
               <motion.div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-4">Connect with Us</h4>
+                <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Connect with Us</h4>
                 <motion.div className="flex gap-3">
                   {socialLinks.map(({ icon: Icon, label, href }, index) => (
                     <motion.a
@@ -249,10 +249,10 @@ export default function Contact() {
                       transition={{ delay: 0.6 + index * 0.1, type: 'spring' }}
                       whileHover={{ scale: 1.15, y: -3 }}
                       whileTap={{ scale: 0.9 }}
-                      className="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center hover:border-cyan-400/50 hover:bg-emerald-500/10 transition-all duration-300 group"
+                      className="w-12 h-12 bg-white dark:bg-slate-900 border border-gray-200 dark:border-white/10 rounded-xl flex items-center justify-center hover:border-cyan-400/50 hover:bg-emerald-500/10 transition-all duration-300 group"
                       aria-label={label}
                     >
-                      <Icon className="w-5 h-5 text-gray-500 group-hover:text-cyan-600 transition-colors" />
+                      <Icon className="w-5 h-5 text-gray-500 dark:text-gray-400 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors" />
                     </motion.a>
                   ))}
                 </motion.div>
@@ -270,9 +270,9 @@ export default function Contact() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-300 opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-300" />
                   </span>
-                  <span className="font-semibold text-cyan-600">Taking new client work</span>
+                  <span className="font-semibold text-cyan-600 dark:text-cyan-400">Taking new client work</span>
                 </motion.div>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-600 dark:text-gray-300">
                   USZIZO is accepting new engagements for product builds, commerce programs, and long-term
                   engineering partnerships. Share your brief and we will route it to the right practice lead.
                 </p>

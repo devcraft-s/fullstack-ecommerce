@@ -13,7 +13,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-12 border-t border-gray-200 bg-white">
+    <footer className="py-12 border-t border-gray-200 dark:border-white/10 bg-white dark:bg-[#0a0a12]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <ShoppingBag className="w-5 h-5 text-white" />
             </motion.div>
-            <span className="text-gray-900">USZIZO<span className="text-cyan-600">.</span></span>
+            <span className="text-gray-900 dark:text-white">USZIZO<span className="text-cyan-600 dark:text-cyan-400">.</span></span>
           </motion.a>
 
           {/* Nav Links */}
@@ -42,7 +42,7 @@ export default function Footer() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.05 }}
                 whileHover={{ y: -2, color: '#10b981' }}
-                className="text-sm text-gray-600 hover:text-cyan-600 transition-colors"
+                className="text-sm text-gray-600 dark:text-gray-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
               >
                 {link.name}
               </motion.a>
@@ -50,7 +50,7 @@ export default function Footer() {
           </nav>
 
           {/* Copyright */}
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-500 dark:text-gray-400">
             © {currentYear} USZIZO. All rights reserved.
           </div>
         </div>

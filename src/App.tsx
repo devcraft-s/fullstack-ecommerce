@@ -11,7 +11,7 @@ function App() {
         <Route
           path="/"
           element={
-            <div className="min-h-screen bg-background text-foreground">
+            <div className="min-h-screen bg-white text-gray-900 dark:bg-[#0a0a12] dark:text-white transition-colors duration-300">
               <Navbar />
               <main>
                 <HomePage />
