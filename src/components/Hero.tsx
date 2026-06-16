@@ -766,7 +766,7 @@ export default function Hero() {
               onClick={addSparkleEffect}
               transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
-              United States team
+              globally integrated team
             </motion.span>{' '}
             with the value of localized support across North America.
           </motion.p>
@@ -779,7 +779,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14"
           >
             <InteractiveButton href="#projects" primary onClickEffect={addSparkleEffect}>
-              Proven Results for North American Clients
+              Proven Results for Clients
               <motion.span animate={{ x: [0, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
                 →
               </motion.span>
@@ -811,7 +811,7 @@ export default function Hero() {
         </div>
 
         {/* Scroll indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
@@ -851,7 +851,7 @@ export default function Hero() {
               </motion.div>
             </motion.a>
           </TraceBorderCard>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </section>
   );

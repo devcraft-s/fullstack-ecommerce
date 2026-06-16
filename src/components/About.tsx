@@ -49,8 +49,8 @@ const qualities = [
   { icon: Star, stat: '9.3/10', label: 'Client Satisfaction Rate', color: 'purple' as const },
   { icon: Users, stat: '300+', label: 'IT Professionals', color: 'pink' as const },
   { icon: Award, stat: '4.8/5', label: 'Clutch Score with 30+ reviews', color: 'amber' as const },
-  { icon: Globe2, stat: '2000+', label: 'US-Based Talent Pool', color: 'cyan' as const },
-  { icon: Trophy, stat: '4x', label: 'Voted a Best US Employer', color: 'purple' as const },
+  { icon: Globe2, stat: '2000+', label: 'Global Talent Pool', color: 'cyan' as const },
+  { icon: Trophy, stat: '4x', label: 'Voted a Best Employer', color: 'purple' as const },
 ];
 
 // const CO_FOUNDER_IMAGE = '/images/co-founder.jpg';
@@ -578,7 +578,7 @@ export default function About() {
               }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              United States Team
+              Globally Integrated Team
             </motion.span>
           </h3>
           <p className="text-gray-600 max-w-2xl mx-auto text-lg">
@@ -633,7 +633,7 @@ export default function About() {
               {/* <h4 className="text-xl font-semibold text-white mb-4">What We Have Delivered Together</h4> */}
               <ul className="space-y-3">
                 {[
-                  'Expanded AI, GenAI, and innovation practices with delivery across the United States and North America.',
+                  'Expanded AI, GenAI, and innovation practices with a globally integrated team delivering across North America.',
                   'Deepened expertise in financial services, manufacturing, healthcare, and life sciences for enterprise clients.',
                   'Recognized as a leader in IDC MarketScapes for North American Experience Build, Experience Design, and Software Engineering Services.',
                 ].map((item, i) => (

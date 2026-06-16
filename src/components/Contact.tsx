@@ -13,7 +13,7 @@ function WhatsAppIcon({ className }: { className?: string }) {
 const contactInfo = [
   { icon: Mail, label: 'Email', value: 'Amazing@devshop.io', href: 'mailto:Amazing@devshop.io' },
   { icon: Phone, label: 'Phone', value: '+1 (440) 313-9295', href: 'tel:+14403139295' },
-  { icon: MapPin, label: 'Location', value: 'United States · Serving North America', href: '#' },
+  { icon: MapPin, label: 'Location', value: 'Global team · Serving North America', href: '#' },
 ];
 
 const socialLinks = [
